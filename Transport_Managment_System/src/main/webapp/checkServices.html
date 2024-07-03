@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Check Service</title>
+<style>
+    body {
+        background-color: #121212;
+        color: #ffffff;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-image: url('truck6.jpg'); /* Add your background image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    }
+    .container {
+        border: 1px solid #444444;
+        padding: 20px;
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        width: 100%;
+        max-width: 400px;
+    }
+    .form-group label {
+        margin-right: 10px;
+        width: 50px;
+        text-align: left;
+    }
+    input[type="text"] {
+        background-color: #333333;
+        border: 1px solid #444444;
+        color: #ffffff;
+        padding: 5px;
+        flex: 1;
+    }
+    .button {
+        background-color: #555555;
+        border: none;
+        color: #ffffff;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin: 10px;
+        text-align: center;
+    }
+    .button:hover {
+        background-color: orange;
+    }
+    p {
+        color: orange;
+    }
+</style>
+<script>
+    function goBack(event) {
+        event.preventDefault();
+        window.history.back();
+    }
+</script>
+</head>
+<body>
+<div class="container">
+    <p>You Can Check Our services According to Your Needed Route</p>
+    <form action="checkservice" method="post">
+        <div class="form-group">
+            <label for="from">From:</label>
+            <input type="text" id="from" name="from" required>
+        </div>
+        <div class="form-group">
+            <label for="to">To:</label>
+            <input type="text" id="to" name="to" required>
+        </div>
+        <div>
+            <input type="submit" class="button" value="Check Service">
+            <button type="button" class="button" onclick="goBack(event)">Go Back</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
